@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Website Frame</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f7fb;
+      color: #222;
+    }
+    header {
+      background: #1f4e79;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #2f6ea3;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      min-height: 70vh;
+      padding: 20px;
+      gap: 20px;
+    }
+    main {
+      flex: 2;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    aside {
+      flex: 1;
+      background: #eaf2f8;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    footer {
+      background: #1f4e79;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    @media (max-width: 700px) {
+      .container { flex-direction: column; }
+      nav { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+    <p>A clean starter frame for your site</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <main>
+      <h2>Welcome</h2>
+      <p>OOPS OOPS OOPS</p>
+    </main>
+
+    <aside>
+      <h3>Sidebar</h3>
+      <p>NAG SULTI RA BAYA KO SA TINUOD SER AY</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>GWAPO MAN  GUD SI DARREL</p>
+  </footer>
+</body>
+</html>
