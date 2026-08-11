@@ -14,7 +14,11 @@
 <div id="dawn-overlay"></div>
 
 <section id="hero">
-  <div class="moon" id="moon" role="button" tabindex="0" aria-pressed="false" aria-label="Toggle dawn mode"><div class="crater"></div></div>
+  <div class="moon" id="moon" role="button" tabindex="0" aria-pressed="false" aria-label="Toggle dawn mode"
+       onclick="document.body.classList.toggle('dawn-mode'); this.setAttribute('aria-pressed', document.body.classList.contains('dawn-mode'));"
+       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); document.body.classList.toggle('dawn-mode'); this.setAttribute('aria-pressed', document.body.classList.contains('dawn-mode'));}">
+    <div class="crater"></div>
+  </div>
   <div class="moon-hint">click the moon</div>
 
   <div class="eyebrow">// BSIT 2A · GRAPHIC DESIGN</div>
@@ -83,19 +87,6 @@
 </footer>
 
 <script>
-  const moon = document.getElementById('moon');
-  function toggleDawn(){
-    const isDawn = document.body.classList.toggle('dawn-mode');
-    moon.setAttribute('aria-pressed', isDawn);
-  }
-  moon.addEventListener('click', toggleDawn);
-  moon.addEventListener('keydown', (e) => {
-    if(e.key === 'Enter' || e.key === ' '){
-      e.preventDefault();
-      toggleDawn();
-    }
-  });
-
   const starField = document.getElementById('stars');
   const STAR_COUNT = 90;
   for(let i=0;i<STAR_COUNT;i++){
