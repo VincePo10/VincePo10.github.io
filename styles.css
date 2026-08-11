@@ -30,7 +30,6 @@ body{
 
 img, svg{image-rendering:pixelated;}
 
-/* ---------- pixel stepped corners, reused everywhere ---------- */
 .pixel-frame{
   clip-path: polygon(
     0 10px, 10px 10px, 10px 0,
@@ -53,7 +52,6 @@ h1,h2,h3, .pixel-font{
   line-height:1.5;
 }
 
-/* ---------- starfield ---------- */
 #stars{
   position:fixed;
   inset:0;
@@ -89,7 +87,7 @@ section{
   padding: 90px 8vw;
 }
 
-/* ================= HERO ================= */
+
 #hero{
   min-height:100vh;
   display:flex;
@@ -100,20 +98,23 @@ section{
 
 .moon{
   position:absolute;
-  top:6%;
-  right:6%;
-  width:220px;
-  height:220px;
+  top:0;
+  right:0;
+  width:280px;
+  height:280px;
   border-radius:50%;
   background: radial-gradient(circle at 35% 30%, #fff6cf 0%, var(--moon) 40%, var(--moon-dark) 100%);
-  box-shadow: 0 0 70px 20px rgba(243,221,143,.35), 0 0 140px 50px rgba(243,221,143,.12);
+  box-shadow: 0 0 90px 28px rgba(243,221,143,.35), 0 0 180px 60px rgba(243,221,143,.12);
   clip-path: polygon(
+    0 0, 100% 0, 100% 100%, 60% 100%, 0 60%,
     50% 0%, 65% 3%, 78% 10%, 88% 20%, 95% 33%, 99% 48%,
     99% 55%, 95% 68%, 88% 80%, 78% 90%, 65% 97%, 50% 100%,
     35% 97%, 22% 90%, 12% 80%, 5% 68%, 1% 55%, 1% 48%,
     5% 33%, 12% 20%, 22% 10%, 35% 3%
   );
+  overflow:hidden;
 }
+
 .moon::before, .moon::after, .moon .crater{
   content:'';
   position:absolute;
@@ -122,7 +123,7 @@ section{
 }
 .moon::before{ width:34px; height:34px; top:40px; left:50px; }
 .moon::after{ width:20px; height:20px; top:110px; left:130px; }
-.moon .crater{ width:16px; height:16px; top:70px; left:140px; }
+.moon .crater{ width:29px; height:29px; top:70px; left:140px; }
 
 .eyebrow{
   font-family:'Press Start 2P', monospace;
@@ -210,7 +211,7 @@ section{
 }
 @keyframes bob{ 0%,100%{ transform:rotate(45deg) translateY(0);} 50%{ transform:rotate(45deg) translateY(6px);} }
 
-/* ================= ABOUT ================= */
+/*about me */
 #about h2{ font-size: clamp(26px, 4vw, 40px); margin-bottom:36px; }
 
 .about-panel{
@@ -240,7 +241,6 @@ section{
   color:var(--cream);
 }
 
-/* ================= ACHIEVEMENTS ================= */
 #achievements h2{ font-size: clamp(26px, 4vw, 40px); margin-bottom:10px; }
 .section-sub{ color:var(--text-dim); font-size:20px; margin-bottom:44px; }
 
@@ -279,7 +279,7 @@ section{
   color:var(--cream-dark);
 }
 
-/* ================= FOOTER ================= */
+/* footer na ni diri */
 footer{
   text-align:center;
   padding:60px 8vw 80px;
