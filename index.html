@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vince Geraldez-Po - Profile</title>
+  <title>Vince Geraldez-Po - Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -17,66 +17,62 @@
 
     body {
       background-color: #0d0f12;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       min-height: 100vh;
-      padding: 20px;
       font-family: 'Press Start 2P', monospace;
       color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .card {
+    header {
       width: 100%;
-      max-width: 480px;
-      background-color: #000000;
-      border: 4px solid #b8332c;
-      padding: 24px 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.8);
-      position: relative;
-      overflow: hidden;
+      background: radial-gradient(circle at 85% 20%, #ebd473 0%, #d4a938 18%, #1f2041 55%, #0d0f12 90%);
+      background-image: 
+        radial-gradient(circle at 85% 20%, #ebd473 0%, #d4a938 18%, #1f2041 55%, #0d0f12 90%),
+        radial-gradient(2px 2px at 10% 30px, #ffd700, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 25% 70px, #ffffff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 60% 40px, #ffd700, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 80% 120px, #ffffff, rgba(0,0,0,0));
+      padding: 60px 20px 40px 20px;
+      display: flex;
+      justify-content: center;
     }
 
-    .header-section {
-      position: relative;
-      background: radial-gradient(circle at 85% 20%, #ebd473 0%, #d4a938 18%, #1f2041 55%, #000000 90%);
-      margin: -24px -20px 20px -20px;
-      padding: 24px 20px 20px 20px;
-      background-image: 
-        radial-gradient(circle at 85% 20%, #ebd473 0%, #d4a938 18%, #1f2041 55%, #000000 90%),
-        radial-gradient(2px 2px at 20px 30px, #ffd700, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 150px 40px, #ffd700, rgba(0,0,0,0)),
-        radial-gradient(2px 2px at 280px 120px, #ffffff, rgba(0,0,0,0));
+    .header-content {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
 
     .title-name {
-      font-size: 26px;
-      line-height: 1.2;
-      letter-spacing: -1px;
+      font-size: 32px;
+      line-height: 1.3;
       color: #ffffff;
-      text-shadow: 3px 3px 0px #000;
-      margin-bottom: 20px;
+      text-shadow: 4px 4px 0px #000;
       text-transform: uppercase;
     }
 
     .profile-row {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 24px;
+      flex-wrap: wrap;
     }
 
     .avatar-container {
-      width: 110px;
-      height: 110px;
-      min-width: 110px;
+      width: 120px;
+      height: 120px;
+      min-width: 120px;
       background-color: #ffffff;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       border: 4px solid #ffffff;
-      box-shadow: 0 0 0 3px #000;
+      box-shadow: 0 0 0 4px #000;
       overflow: hidden;
     }
 
@@ -90,11 +86,11 @@
     .avatar-icon::before {
       content: '';
       position: absolute;
-      top: 22px;
+      top: 24px;
       left: 50%;
       transform: translateX(-50%);
-      width: 38px;
-      height: 38px;
+      width: 42px;
+      height: 42px;
       background-color: #000;
       border-radius: 50%;
     }
@@ -105,16 +101,16 @@
       bottom: -10px;
       left: 50%;
       transform: translateX(-50%);
-      width: 70px;
-      height: 48px;
+      width: 76px;
+      height: 52px;
       background-color: #000;
-      border-radius: 35px 35px 0 0;
+      border-radius: 38px 38px 0 0;
     }
 
     .profile-info {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 16px;
     }
 
     .contact-btn {
@@ -122,51 +118,68 @@
       background-color: #29a0cc;
       color: #ffffff;
       text-decoration: none;
-      padding: 8px 16px;
-      font-size: 13px;
+      padding: 12px 24px;
+      font-size: 14px;
       border: 3px solid #000;
-      box-shadow: inset -3px -3px 0px #135d78, inset 3px 3px 0px #67d6ff;
+      box-shadow: inset -4px -4px 0px #135d78, inset 4px 4px 0px #67d6ff, 4px 4px 0px #000;
       text-align: center;
       text-shadow: 2px 2px 0px #000;
       border-radius: 12px;
+      width: fit-content;
+      transition: transform 0.1s ease;
+    }
+
+    .contact-btn:hover {
+      transform: translate(-2px, -2px);
     }
 
     .info-text {
-      font-size: 10px;
-      line-height: 1.6;
+      font-size: 12px;
+      line-height: 1.8;
       color: #ffffff;
       text-shadow: 2px 2px 0px #000;
       text-transform: uppercase;
     }
 
+    main {
+      width: 100%;
+      max-width: 900px;
+      padding: 40px 20px 60px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
     .section-title {
-      font-size: 18px;
+      font-size: 20px;
       text-transform: uppercase;
-      margin-top: 15px;
-      margin-bottom: 12px;
       letter-spacing: -0.5px;
+      border-bottom: 3px dashed #333;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
     }
 
     .about-text {
-      font-size: 7.5px;
-      line-height: 1.8;
-      color: #ffffff;
-      margin-bottom: 12px;
+      font-size: 10px;
+      line-height: 2;
+      color: #dddddd;
+      margin-bottom: 16px;
       text-transform: uppercase;
-      letter-spacing: 0.2px;
+      letter-spacing: 0.5px;
     }
 
     .achievements-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 8px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
       margin-top: 10px;
     }
 
     .polaroid-card {
       background-color: #e5dcc3;
-      padding: 5px 5px 18px 5px;
-      border: 2px solid #000;
+      padding: 10px 10px 28px 10px;
+      border: 3px solid #000;
+      box-shadow: 4px 4px 0px #000;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -175,23 +188,23 @@
 
     .polaroid-photo {
       width: 100%;
-      aspect-ratio: 1 / 1.2;
+      aspect-ratio: 1 / 1.1;
       background-color: #000000;
     }
 
     .polaroid-heart {
       position: absolute;
-      bottom: 3px;
-      left: 5px;
-      width: 10px;
-      height: 10px;
+      bottom: 6px;
+      left: 10px;
+      width: 14px;
+      height: 14px;
     }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <div class="header-section">
+  <header>
+    <div class="header-content">
       <h1 class="title-name">VINCE<br>GERALDEZ-PO</h1>
 
       <div class="profile-row">
@@ -207,46 +220,52 @@
         </div>
       </div>
     </div>
+  </header>
 
-    <h2 class="section-title">ABOUT ME</h2>
-    <p class="about-text">
-      HI, I'M VINCE! I'M A BSIT STUDENT BASED IN DAVAO. I'M PASSIONATE ABOUT GRAPHIC DESIGN, AND I LOVE PLAYING BADMINTON AND WALKING. WHEN I'M NOT STUDYING, YOU CAN USUALLY FIND ME PLAYING BADMINTON MOSTLY ON WEEKENDS, HIKING, COOKING, OR SOMETIMES BEING A BARISTA.
-    </p>
-    <p class="about-text">
-      I BELIEVE IN THE SAYING, LIVE YOUR LIFE TO THE FULLEST, AND I'M ALWAYS EXCITED TO CONNECT WITH PEOPLE WHO SHARE SIMILAR INTERESTS IN MOVIES, MUSIC AND MANY MORE.
-    </p>
-    <p class="about-text">
-      FEEL FREE TO REACH OUT — I'D LOVE TO CONNECT, COLLABORATE, CHAT!
-    </p>
+  <main>
+    <section>
+      <h2 class="section-title">ABOUT ME</h2>
+      <p class="about-text">
+        HI, I'M VINCE! I'M A BSIT STUDENT BASED IN DAVAO. I'M PASSIONATE ABOUT GRAPHIC DESIGN, AND I LOVE PLAYING BADMINTON AND WALKING. WHEN I'M NOT STUDYING, YOU CAN USUALLY FIND ME PLAYING BADMINTON MOSTLY ON WEEKENDS, HIKING, COOKING, OR SOMETIMES BEING A BARISTA.
+      </p>
+      <p class="about-text">
+        I BELIEVE IN THE SAYING, LIVE YOUR LIFE TO THE FULLEST, AND I'M ALWAYS EXCITED TO CONNECT WITH PEOPLE WHO SHARE SIMILAR INTERESTS IN MOVIES, MUSIC AND MANY MORE.
+      </p>
+      <p class="about-text">
+        FEEL FREE TO REACH OUT — I'D LOVE TO CONNECT, COLLABORATE, CHAT!
+      </p>
+    </section>
 
-    <h2 class="section-title">ACHIEVEMENTS</h2>
-    <div class="achievements-grid">
-      <div class="polaroid-card">
-        <div class="polaroid-photo"></div>
-        <svg class="polaroid-heart" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
+    <section>
+      <h2 class="section-title">ACHIEVEMENTS</h2>
+      <div class="achievements-grid">
+        <div class="polaroid-card">
+          <div class="polaroid-photo"></div>
+          <svg class="polaroid-heart" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <div class="polaroid-card">
+          <div class="polaroid-photo"></div>
+          <svg class="polaroid-heart" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <div class="polaroid-card">
+          <div class="polaroid-photo"></div>
+          <svg class="polaroid-heart" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
+        <div class="polaroid-card">
+          <div class="polaroid-photo"></div>
+          <svg class="polaroid-heart" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+        </div>
       </div>
-      <div class="polaroid-card">
-        <div class="polaroid-photo"></div>
-        <svg class="polaroid-heart" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-      </div>
-      <div class="polaroid-card">
-        <div class="polaroid-photo"></div>
-        <svg class="polaroid-heart" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-      </div>
-      <div class="polaroid-card">
-        <div class="polaroid-photo"></div>
-        <svg class="polaroid-heart" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2">
-          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-        </svg>
-      </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
 </body>
 </html>
